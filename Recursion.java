@@ -30,8 +30,8 @@ public class Recursion{
     }
 
     /*As Per classwork*/
-    //public static ArrayList<Integer> makeAllSums(){
-    //
+    //public static ArrayList<Integer> makeAllSums(int n)){
+        
     //}
 
     public static void main(String[] args) {
@@ -43,7 +43,7 @@ public class Recursion{
         System.out.println(fib(4));
         System.out.println(fib(5));
         System.out.println(fib(10));
-        System.out.println(fib(47));
+        System.out.println(fib(46));
     }
 
 }
