@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Recursion{
+public class recursion{
     private static double sr(double n, double guess, double tolerance) {
         while (Math.abs(((guess*guess-n)/n)*100) > tolerance) {
             //System.out.println(guess);
