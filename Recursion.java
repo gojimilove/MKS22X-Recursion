@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-//import java.util.Integer;
 
 public class Recursion{
     private static double sr(double n, double guess, double tolerance) {
@@ -11,10 +10,13 @@ public class Recursion{
     }
 
     private static ArrayList<Integer> sums(ArrayList<Integer> list, int n, int sum) {
-        if (n == 0) list.add(sum);
+        if (n == 0) {
+            //System.out.println(sum);
+            list.add(sum); //base case
+        }
         else {
-            sums(list, n-1, sum);
-            sums(list, n-1, sum+n);
+            sums(list, n-1, sum); //dont use the number
+            sums(list, n-1, sum+n); //use the number
         }
         return list;
     }
@@ -35,17 +37,13 @@ public class Recursion{
         if (n == 0) return 0;
         else if (n == 1) return 1;
         else {
-            return fib(n-1) + fib(n-2);
+            return fib(n-1) + fib(n-2); //add the two terms before it together
         }
     }
 
-    /*As Per classwork*/
     public static ArrayList<Integer> makeAllSums(int n){
         ArrayList<Integer> answer = new ArrayList<Integer>();
         return sums(answer, n, 0);
-        // answer.add(5);
-        // answer.add(8);
-        // return answer;
     }
 
     public static String printArray(ArrayList<Integer> x) {
@@ -69,9 +67,11 @@ public class Recursion{
         System.out.println(fib(2));
         System.out.println(fib(3));
         System.out.println(fib(4));
-        //System.out.println(fib(46));
+        //System.out.println(fib(46)); //limit, breaks at fib(47)
         System.out.println("\n==========\nMakeAllSums Testing:");
         System.out.println(printArray(makeAllSums(3)));
+        System.out.println(printArray(makeAllSums(2)));
+        //System.out.println(printArray(makeAllSums(10))); //too many numbers to leave in
     }
 
 }
