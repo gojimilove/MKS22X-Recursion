@@ -14,7 +14,7 @@ public class Recursion{
         if (n == 0) list.add(sum);
         else {
             sums(list, n-1, sum);
-            sums(list, n, sum+n);
+            sums(list, n-1, sum+n);
         }
         return list;
     }
@@ -42,16 +42,16 @@ public class Recursion{
     /*As Per classwork*/
     public static ArrayList<Integer> makeAllSums(int n){
         ArrayList<Integer> answer = new ArrayList<Integer>();
-        //return sums(answer, n, 0);
-        answer.add(5);
-        answer.add(8);
-        return answer;
+        return sums(answer, n, 0);
+        // answer.add(5);
+        // answer.add(8);
+        // return answer;
     }
 
     public static String printArray(ArrayList<Integer> x) {
         String s = "[";
         for (int i = 0; i < x.size(); i++) {
-            s+= x.get(i).toString();
+            s+= x.get(i);
             if (i < x.size()-1) {
                 s+=", ";
             }
